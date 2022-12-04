@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mega Sklep</title>
+
+    <style>
+        ul.basket-list {
+            list-style: none;
+        }
+        button {
+            display: inline-block;
+        }
+    </style>
+
+
+</head>
+<body>
+<section class="products">
+    <h1>Lista Produktów:</h1>
+    <ul class="productsList">
+        <li><strong>Ogórki kiszone</strong> - 9.99  <button class="btn-buy-product" data-id="cucumber" data-name="Ogórki kiszone" data-price="9.99" >Kupuj!</button> </li>
+        <li><strong>Pomidoreczki</strong> - 3.49  <button class="btn-buy-product" data-id="tomato" data-name="Pomidory kosmiczne" data-price="3.49">Kupuj!</button> </li>
+        <li><strong>Merolinio!</strong> - 900 777.99  <button class="btn-buy-product" data-id="car" data-name="Merolkowe autko" data-price="900777.99">Kupuj!</button> </li>
+        <li><strong>Specjał Tosi!</strong> - 500.89  <button class="btn-buy-product" data-id="kupa" data-name="Worek kupy Smajsloła" data-price="500.99">Kupuj!</button> </li>
+        <li><strong>Specjał Martynki!</strong> - 40.89  <button class="btn-buy-product" data-id="kupa" data-name="Ola Poddrążek z Alą Łakomską" data-price="500.99">Kupuj!</button> </li>
+        <li><strong>Specjał Domi!</strong> - 40.89  <button class="btn-buy-product" data-id="kupa" data-name="Kajmaczek z biedry" data-price="500.99">Kupuj!</button> </li>
+    </ul>
+</section>
+<section class="basket">
+    <h1>koszyk</h1>
+    <ul class="basket-list"></ul>
+    <button class="buy-all-in-basket" disabled>Złóż zamówienie!</button>
+</section>
+
+<section class="admin form-add-product">
+    <h1>Panel Administratora - dodaj propozycję produktu:</h1>
+    <form name="prodAdder">
+        <input type="text" name="product-name" placeholder="Wprowadź nazwę produktu" required>
+        <input type="number" name="product-price" placeholder="Wprowadź cenę" step="any" required>
+        <input type="submit" value="Dodaj!">
+:
+    </form>
+</section>
+
+
+
+<script src="src/basket.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/admin.js"></script>
+</body>
+</html>
