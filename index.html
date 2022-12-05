@@ -8,43 +8,76 @@
     <title>Mega Sklep</title>
 
     <style>
+
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+        }
+        .head {
+            margin: 2rem;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: black dotted 1px;
+        }
         ul.basket-list {
             list-style: none;
         }
         button {
             display: inline-block;
+            background-color: lightgoldenrodyellow;
+            border: 1px black solid;
+            border-radius: 10px;
+            padding: 5px
+        }
+
+        .productsList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .productsList li {
+            max-width:30%;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border-bottom: black 1px solid;
+
         }
     </style>
 
 
 </head>
 <body>
+<header><p class="head">Testowy sklep internetowy</p></header>
+<section class="admin form-add-product">
+    <h1>Panel Administratora - dodaj propozycję produktu:</h1>
+    <form name="prodAdder">
+        <input type="text" name="product-name" placeholder="Wprowadź nazwę" required>
+        <input type="number" name="product-price" placeholder="Wprowadź cenę" step="any" required>
+        <input type="submit" value="Dodaj!">
+    </form>
+</section>
+<hr>
 <section class="products">
     <h1>Lista Produktów:</h1>
     <ul class="productsList">
         <li><strong>Ogórki kiszone</strong> - 9.99  <button class="btn-buy-product" data-id="cucumber" data-name="Ogórki kiszone" data-price="9.99" >Kupuj!</button> </li>
-        <li><strong>Pomidoreczki</strong> - 3.49  <button class="btn-buy-product" data-id="tomato" data-name="Pomidory kosmiczne" data-price="3.49">Kupuj!</button> </li>
-        <li><strong>Merolinio!</strong> - 900 777.99  <button class="btn-buy-product" data-id="car" data-name="Merolkowe autko" data-price="900777.99">Kupuj!</button> </li>
-        <li><strong>Specjał Tosi!</strong> - 500.89  <button class="btn-buy-product" data-id="kupa" data-name="Worek kupy Smajsloła" data-price="500.99">Kupuj!</button> </li>
-        <li><strong>Specjał Martynki!</strong> - 40.89  <button class="btn-buy-product" data-id="kupa" data-name="Ola Poddrążek z Alą Łakomską" data-price="500.99">Kupuj!</button> </li>
-        <li><strong>Specjał Domi!</strong> - 40.89  <button class="btn-buy-product" data-id="kupa" data-name="Kajmaczek z biedry" data-price="500.99">Kupuj!</button> </li>
+        <li><strong>Pomidory</strong> - 3.49  <button class="btn-buy-product" data-id="tomato" data-name="Pomidory" data-price="3.49">Kupuj!</button> </li>
+        <li><strong>Mercedes</strong> - 900 777.00  <button class="btn-buy-product" data-id="car" data-name="Mercedes Benz" data-price="900777.00">Kupuj!</button> </li>
+        <li><strong>Specjał Tosi</strong> - 500.89  <button class="btn-buy-product" data-id="special" data-name="Specjał Tosi" data-price="500.89">Kupuj!</button> </li>
+        <li><strong>Specjał Martynki</strong> - 18.99  <button class="btn-buy-product" data-id="special" data-name="Specjał Martynki" data-price="18.99">Kupuj!</button> </li>
+        <li><strong>Specjał Domi</strong> - 40.89  <button class="btn-buy-product" data-id="special" data-name="Specjał Domi" data-price="40.89">Kupuj!</button> </li>
     </ul>
 </section>
+<hr>
 <section class="basket">
-    <h1>koszyk</h1>
+    <h1>Koszyk</h1>
     <ul class="basket-list"></ul>
     <button class="buy-all-in-basket" disabled>Złóż zamówienie!</button>
 </section>
 
-<section class="admin form-add-product">
-    <h1>Panel Administratora - dodaj propozycję produktu:</h1>
-    <form name="prodAdder">
-        <input type="text" name="product-name" placeholder="Wprowadź nazwę produktu" required>
-        <input type="number" name="product-price" placeholder="Wprowadź cenę" step="any" required>
-        <input type="submit" value="Dodaj!">
-:
-    </form>
-</section>
+
 
 
 

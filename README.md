@@ -7,3 +7,6 @@ Exercise for testing JS knowlege
 3. Buying (and reset bucket list)
 4. Adding new products
 5. LocalStorage elements
+
+
+https://creartive-solutions.github.io/ShopTest/
